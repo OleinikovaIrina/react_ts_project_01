@@ -1,0 +1,13 @@
+.input {
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    border: 2px solid #5a1111;
+    background: rgb(212, 214, 216);
+    border-radius: 5px;
+    font-size: 26px;
+    color: rebeccapurple;
+    cursor: pointer;
+    text-align: center;
+  }
+  
