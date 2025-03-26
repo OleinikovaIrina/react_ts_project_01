@@ -1,11 +1,8 @@
-
 import Input from "../../components/Input/Input";
 
-
-function Homework06() {
-
-  return <Input/>;
+function Homework06 (){
+  // return <Input/>  
+   return <Input name='test'/>
 }
 
-//Экспорт по умолчанию для компонента Lesson06
 export default Homework06;
