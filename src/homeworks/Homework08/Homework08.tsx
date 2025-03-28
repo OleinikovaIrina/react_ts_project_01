@@ -1,47 +1,42 @@
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useState } from "react";
 
+import Button from "../../components/Button/Button";
+import Input from "../../components/Input/Input";
 import './styles.css'
 
-import Button from '../../components/Button/Button';
-import Input from '../../components/Input/Input';
-
 function Homework08() {
-
-    const [password, setPassword] = useState<string>('');
-  const [showPassword, setShowPassword] = useState<boolean>(false)
-
-  const onChangePassword= (event: ChangeEvent<HTMLInputElement>) => {
-    console.log(event);
-
-    setPassword(event.target.value)
-  }
-
-  const showPasswordHandler = () => {
-    setShowPassword(!showPassword)
-  }
-
-  const hidePasswordHandler = () => {
-    setShowPassword(false);
+  const [passwordValue, setPasswordValue] = useState<string>('');
+  const [isShowPassword, setIsShowPassword] = useState<boolean>(false);
   
+  const onChangePassword = (event: ChangeEvent<HTMLInputElement>) => {
+    setPasswordValue(event.target.value)
   }
+
+  const showPassword = () => {
+    setIsShowPassword(true)
+  }
+
+  const hidePassword = () => {
+    setIsShowPassword(false)
+  }
+
   return (
     <div className="homework08-container">
+      <h1>Change password</h1>
       <Input
-        name='Change password'
+        name='password'
         label='Password'
         id='password_id'
-        placeholder='Enter your password'
+        placeholder="Enter your password"
         type='password'
-        value={password}
+        value={passwordValue}
         onChange={onChangePassword}
       />
-      <Button name='SHOW PASSWORD' onClick={showPasswordHandler} />
-      <Button name="HIDE PASSWORD" onClick={hidePasswordHandler} />
-   
-      {showPassword && <div>{password}</div>}
-      
+      <Button name='SHOW PASSWORD' onClick={showPassword} />
+      <Button name='HIDE PASSWORD' onClick={hidePassword} />
+      {isShowPassword && <div className="result-container">{passwordValue}</div>}
     </div>
   )
 }
 
-export default Homework08;
+export default Homework08
