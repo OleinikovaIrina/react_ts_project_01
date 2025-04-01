@@ -1,20 +1,15 @@
-import { Homework10Container, MainButton } from "../../components/Button/styles";
+
+
+import Button from "../../components/Button/Button";
+import { Homework10Container } from "./styles";
 
 function Homework10 (){
-    const handleClick = () => {
-        console.log("Button clicked!");
-    };
-
-    return(
-<Homework10Container>
-        <MainButton  onClick={handleClick}
-        disabled={false}
-        type="submit">SEND</MainButton>
-
-        <MainButton danger onClick={handleClick}
-        disabled={false}
-        type="submit">DELETE</MainButton>
-</Homework10Container>
-    )
+  return (
+  <Homework10Container>
+    <Button name='SEND'/>
+    <Button name='DELETE' danger/>
+  </Homework10Container>
+)
 }
+
 export default Homework10
