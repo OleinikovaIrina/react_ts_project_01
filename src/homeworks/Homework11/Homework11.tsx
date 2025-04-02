@@ -1,32 +1,53 @@
-import { ChangeEvent, useEffect, useState } from "react"
-import Input from "../../components/Input/Input"
+import { ChangeEvent, useEffect, useState } from "react";
 
-import { Counter, Homework11Container } from "./styles";
+import Input from "../../components/Input/Input";
+import { Homework11Container, Result } from "./styles";
 
 function Homework11() {
-    const [count, setCount] = useState<number>(-1);
+  const [note, setNote] = useState<string>('');
+  const [additNote, setAdditNote] = useState<string>('');
+  const [countNoteChange, setCountNoteChange] = useState<number>(0);
 
-    const [exampleValueFirst, setExampleValueFirst] = useState<string>('')
-    const changeExampleValueFirst = (event: ChangeEvent<HTMLInputElement>) => {
-        setExampleValueFirst(event.target.value)}
+  const onChangeNote = (event: ChangeEvent<HTMLInputElement>) => {
+    setNote(event.target.value)
+  }
 
-    const [exampleValueSecond, setExampleValueSecond] = useState<string>('')
-    const changeExampleValueSecond = (event: ChangeEvent<HTMLInputElement>) => {
-            setExampleValueSecond(event.target.value)
-        }
-        useEffect(() => {
+  const onAdditChangeNote = (event: ChangeEvent<HTMLInputElement>) => {
+    setAdditNote(event.target.value)
+  }
 
-            setCount((prevValue) => prevValue + 1);
-        }, [exampleValueFirst]);
+  // state = 0. Функция не будет выполняться, если в поле note пустое значение
+  // useEffect(() => {
+  //   if (note) {
+  //     setCountNoteChange((prevValue) => prevValue + 1)
+  //   }
+  // }, [note])
 
-        return (
-            <Homework11Container>
+  // state = 0
+  useEffect(() => {
+    setCountNoteChange((prevValue) => prevValue + 1)
+  }, [note])
 
-                <Input name='example1' value={exampleValueFirst} onChange={changeExampleValueFirst} />
-                <Input name='example2' value={exampleValueSecond} onChange={changeExampleValueSecond} />
-                <Counter>Количество изменений: {count}</Counter>
+  return (
+    <Homework11Container>
+      <Input
+        name='note'
+        placeholder='Enter your note'
+        value={note}
+        onChange={onChangeNote} />
+      <Result>
+        {/* state = -1. -1 не показывается, вместо неё мы подставляем 0 */}
+        {/* Количество изменение в поле Note {countNoteChange === -1 ? 0 : countNoteChange} */}
+        {/* state = 0 */}
+        Количество изменение в поле Note {countNoteChange - 1}
+      </Result>
+      <Input
+        name='note_additional'
+        placeholder='Enter your additional note'
+        value={additNote}
+        onChange={onAdditChangeNote} />
+    </Homework11Container>
+  )
+}
 
-            </Homework11Container>
-        )
-    }
-    export default Homework11
+export default Homework11
