@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import backImage from '../../assets/backgraundimage.jpg'
 
 export const Homework12Container = styled.div`
   display: flex;
@@ -8,7 +9,11 @@ export const Homework12Container = styled.div`
   flex: 1;
   padding: 60px;
   background-color: rgb(241, 231, 83);
+  background-image: url(${backImage});
+  background-position:  center;
+  background-size: cover;
 `;
+
 export const FactWrapper = styled.div`
  display: flex;
  flex-direction: column;
@@ -23,10 +28,10 @@ export const FactWrapper = styled.div`
  color:rgb(66, 113, 20);
  font-weight: bold;
  text-align: justify; 
-`
+`;
 export const Error =styled.div`
  font-size: 28px;
  color: red;
  font-weight: bold;
-`
+`;
 

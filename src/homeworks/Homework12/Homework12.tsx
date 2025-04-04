@@ -1,7 +1,7 @@
 import axios from "axios";
 import Button from "../../components/Button/Button";
 import { FactWrapper, Homework12Container, Error } from "./styles";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Spinner from "../../components/Spinner/Spinner";
 
 function Homework12() {
@@ -33,6 +33,7 @@ function Homework12() {
 
         }
     }
+useEffect(()=> {getFact()},[]);
 
     return (
         <Homework12Container>
