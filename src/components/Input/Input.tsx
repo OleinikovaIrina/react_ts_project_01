@@ -1,4 +1,4 @@
-import { InputContainer, Label, InputComponent } from './styles';
+import { InputContainer, Label, InputComponent, ErrorMessage } from './styles';
 import { InputProps } from './types';
 
 function Input({
@@ -9,7 +9,9 @@ function Input({
   onChange,
   label,
   id,
-  search
+  search,
+  error,
+checked
 }: InputProps) {
   return (
     <InputContainer>
@@ -21,10 +23,14 @@ function Input({
         onChange={onChange}
         type={type}
         id={id}
-        isSearch = {search}
+        isSearch={search}
+        checked={checked}
+
       />
+      <ErrorMessage>{error}</ErrorMessage>
     </InputContainer>
   )
 }
 
 export default Input;
+
