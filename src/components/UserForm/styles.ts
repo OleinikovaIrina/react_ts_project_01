@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const EmployeeFormComponent = styled.form`
+export const UserFormComponent= styled.form`
  display: flex;
  flex-direction: column;
  gap: 10px;
@@ -14,8 +14,8 @@ export const Title = styled.div`
  align-self: center;
  font-size: 26px;
  font-weight: bold;
-`
 
+`
 export const CheckboxContainer = styled.div`
  display: flex;
  align-items: center;
@@ -33,6 +33,9 @@ export const ErrorMessage = styled.div`
  height: 20px;
  font-size: 18px;
  color: red;
-`
-
-
+ `
+ export const LoginMessage = styled.div`
+ height: 24px;
+ font-size: 20px;
+ color: blue;
+ `

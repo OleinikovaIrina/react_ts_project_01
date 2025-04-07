@@ -11,7 +11,7 @@ function Input({
   id,
   search,
   error,
-checked
+
 }: InputProps) {
   return (
     <InputContainer>
@@ -24,7 +24,7 @@ checked
         type={type}
         id={id}
         isSearch={search}
-        checked={checked}
+       
 
       />
       <ErrorMessage>{error}</ErrorMessage>
