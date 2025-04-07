@@ -1,5 +1,8 @@
-export interface EmployeeFormValue {
-    fullName: string,
-    age: number,
-    acceptTerms: boolean
-}
+export interface EmployeeFormValues {
+    full_name: string,
+    age: string,
+    agreement: boolean,
+    password: string,
+    code: string
+  }
+  

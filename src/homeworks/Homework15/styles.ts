@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-export const Homework14Container = styled.div`
+export const Homework15Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
