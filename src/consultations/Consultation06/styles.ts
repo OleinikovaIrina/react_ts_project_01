@@ -12,17 +12,17 @@ export const Consultation06Container = styled.div`
 `;
 
 export const UserCard = styled.div`
-display: flex;
-flex-direction: column;
-gap: 10px;
-padding: 40px;
-border: 1px solid black;
-border-radius: 4px;
-width: 700px;
-min-height: 300px;
-max-height: fit-content;
-background-color: white;
-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px;
+  border: 1px solid black;
+  border-radius: 4px;
+  width: 700px;
+  min-height: 300px;
+  max-height: fit-content;
+  background-color: white;
+  color: black;
 `;
 
 export const Avatar = styled.img`
@@ -32,11 +32,11 @@ export const Avatar = styled.img`
 `;
 
 export const UserName = styled.div`
-font-size: 24px;
-font-weight: bold;
+  font-size: 24px;
+  font-weight: bold;
 `;
 
 export const UserInfo = styled.div`
-font-size: 20px;
-font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 `;
