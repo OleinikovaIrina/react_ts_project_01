@@ -20,6 +20,8 @@ function Layout({children} : LayoutProps) {
           страницу по маршруту через prop to */}
           <NavLink to='/'>Home</NavLink>
           <NavLink to='/about'>About</NavLink>
+          <NavLink to='/course'>Course</NavLink>
+
         </Nav>
       </Header>
       <Main>{children}</Main>
