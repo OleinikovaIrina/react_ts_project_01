@@ -1,15 +1,17 @@
-import { CourseWrapper, Title,List} from "./styles";
+import { CourseWrapper, Title, ListItem} from "./styles";
+import { lessonsData } from "./data";
+import { v4 } from "uuid";
 
 function Course() {
+
+    const lessons =lessonsData.map((lesson:string)=>{
+        return <ListItem key={v4()}>{lesson}</ListItem>
+    })
     return (
         <CourseWrapper>
             <Title>React Lessons
+            {lessons}
             </Title>
-             <List>
-                <li>useState, useEffect – Hooks for state and side effects</li>
-                <li>Forms and input handling – onChange, controlled and uncontrolled components</li>
-                <li>CSS in React – inline styles, CSS Modules, styled-components</li>
-            </List>
         </CourseWrapper>
     )
 }

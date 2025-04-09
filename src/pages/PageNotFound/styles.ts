@@ -1,21 +1,19 @@
 import styled from '@emotion/styled';
-export const CourseWrapper = styled.div`
+
+export const PageNotFoundWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 16px;
   flex: 1;
   padding: 60px;
-  background-color: rgb(218, 167, 226);
+  background-color: rgb(224, 205, 154);
 `
 export const Title = styled.div`
  font-size: 40px;
  font-weight: bold;
- color: #390a21
+ color: #761c10;
 `
-export const ListItem = styled.div`
- font-size: 28px;
- font-weight: bold;
- color: #5a1637
+export const Image = styled.img`
+ width: 400px;
 `
