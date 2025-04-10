@@ -28,7 +28,7 @@ import Puma from './pages/Clients/components/Puma/Puma'
 // import Lesson12 from "./lessons/Lesson12/Lesson12"
 // import Lesson13 from "./lessons/Lesson13/Lesson13"
 // import Lesson14 from "./lessons/Lesson14/Lesson14"
-
+import Lesson18 from './lessons/Lesson18/Lesson18'
 
 //Homeworks imports
 // import Homework06 from "./homeworks/Homework06/Homework06"
@@ -68,7 +68,8 @@ function App() {
           <Route path='/clients/adidas' element={<Adidas />}/>
           <Route path='/clients/nike' element={<Nike />}/>
           <Route path='/clients/puma' element={<Puma />}/>
-        {/* path='*' - специальный маршрут, который вызовет переданный компонент в
+          <Route path='/lesson18' element={<Lesson18 />} />
+         {/* path='*' - специальный маршрут, который вызовет переданный компонент в
           том случае, если в маршрутах выше не будет найдено того маршрута,
           к которому обращается пользователь */}
           <Route path='*' element={<PageNotFound />} />        </Routes>
