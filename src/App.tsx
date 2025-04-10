@@ -13,6 +13,8 @@ import Clients from './pages/Clients/Clients'
 import Adidas from './pages/Clients/components/Adidas/Adidas'
 import Nike from './pages/Clients/components/Nike/Nike'
 import Puma from './pages/Clients/components/Puma/Puma'
+import Lesson18 from './lessons/Lesson18/Lesson18'
+import Homework18 from './homeworks/Homework18/Homework18'
 
 //Lessons imports
 // импорт компонента Lesson06 по умолчанию
@@ -28,7 +30,7 @@ import Puma from './pages/Clients/components/Puma/Puma'
 // import Lesson12 from "./lessons/Lesson12/Lesson12"
 // import Lesson13 from "./lessons/Lesson13/Lesson13"
 // import Lesson14 from "./lessons/Lesson14/Lesson14"
-import Lesson18 from './lessons/Lesson18/Lesson18'
+// import Lesson18 from './lessons/Lesson18/Lesson18'
 
 //Homeworks imports
 // import Homework06 from "./homeworks/Homework06/Homework06"
@@ -69,6 +71,8 @@ function App() {
           <Route path='/clients/nike' element={<Nike />}/>
           <Route path='/clients/puma' element={<Puma />}/>
           <Route path='/lesson18' element={<Lesson18 />} />
+          <Route path='/homework18' element={<Homework18 />} />
+       
          {/* path='*' - специальный маршрут, который вызовет переданный компонент в
           том случае, если в маршрутах выше не будет найдено того маршрута,
           к которому обращается пользователь */}
